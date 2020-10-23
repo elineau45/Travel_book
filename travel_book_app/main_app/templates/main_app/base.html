@@ -43,6 +43,11 @@
                         <li class="nav-item btn">
                             <a class="nav-link" href="{% url 'main_app:propos' %}">Qui suis-je?</a>
                         </li>
+
+                        <li class="nav-item btn">
+                            <a class="nav-link" href="/admin">Admin</a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -72,7 +77,11 @@
             <div class="col-md-6 align-self-center text-white-50">
                 <i class="fa fa-copyright"> Copyright WildCodeSchool 2020</i>
             </div>
-
+            <div class="col-md-1 align-self-center m-0 text-white-50">
+                {% if user.administrateur %}
+                <a class="m-0 text-reset text-decoration-none" href='/admin'>Admin</a>
+                {% endif %}
+            </div>
 
 
             <!-- <div class="col-md-1 align-self-center m-0 text-white-50">

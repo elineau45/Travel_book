@@ -19,8 +19,13 @@ class Step(models.Model):
     summary = models.TextField()
 
     def __str__(self):
-        return self.name
+        return self.city
 
 
 class Stopover(models.Model):
-    links = models.URLField()
+    step = models.ForeignKey(Step, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    url = models.URLField()
+
+    def __str__(self):
+        return self.title

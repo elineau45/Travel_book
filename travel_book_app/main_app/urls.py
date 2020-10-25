@@ -8,10 +8,16 @@ app_name = "main_app"
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("old_travels/", views.old_travels, name="old_travels"),
+    path("test_detail/", views.test_detail, name="test_detail"),
     path("villes/", views.villes, name="villes"),
     path("nantes/", views.nantes, name="nantes"),
     path("nice/", views.nice, name="nice"),
+    path("marseille_cassis/", views.marseille_cassis, name="marseille_cassis"),
     path("lehavre/", views.lehavre, name="lehavre"),
+    path("vannes/", views.vannes, name="vannes"),
+    path("brest/", views.brest, name="brest"),
+    path("orleans/", views.orleans, name="orleans"),
     path("propos/", views.propos, name="propos"),
 ]
 

@@ -4,7 +4,7 @@
 {% block content %}
 <section>
     <h2 class="text-center p-3 txt">Mes villes</h2>
-    <hr class="style-eight mb-5">
+
     <div class="container">
         <div class="card my-12 shadow p-3 rounded">
             <div class="row">
@@ -17,7 +17,14 @@
                     </div>
                 </div>
 
-
+                <div class="col-md-4">
+                    <img src="{% static 'main_app/img/nice.jpg'%}" class="w-100 imgMenu rounded">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <a href='{% url "main_app:marseille_cassis" %}' class="btn btn-primary mx-auto">
+                            Marseille-Cassis
+                        </a>
+                    </div>
+                </div>
 
                 <div class="col-md-4">
                     <img src="{% static 'main_app/img/nice.jpg'%}" class="w-100 imgMenu rounded">
@@ -33,6 +40,33 @@
                     <div class="mb-5 d-flex justify-content-center">
                         <a href='{% url "main_app:lehavre" %}' class="btn btn-primary mx-auto">
                             Le Havre
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{% static 'main_app/img/vannes.jpg'%}" class="w-100 imgMenu rounded">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <a href='{% url "main_app:vannes" %}' class="btn btn-primary mx-auto">
+                            Vannes
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{% static 'main_app/img/brest.jpg'%}" class="w-100 imgMenu rounded">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <a href='{% url "main_app:brest" %}' class="btn btn-primary mx-auto">
+                            Brest
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{% static 'main_app/img/orleans.jpg'%}" class="w-100 imgMenu rounded">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <a href='{% url "main_app:orleans" %}' class="btn btn-primary mx-auto">
+                            Orléans
                         </a>
                     </div>
                 </div>

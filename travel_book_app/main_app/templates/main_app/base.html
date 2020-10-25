@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'main_app/css/style.css' %}" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <script src="https://use.fontawesome.com/3d4ae29890.js"></script>
-    <link rel="icon" href="{% static 'main_app/img/favico.png' %}" />
+
     <title>Travel Book</title>
 
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row align-items-center skeleton">
+        <div class="row align-items-center skeleton justify-content-center">
             <div class="col-6 col-md-4 col-lg-3">
                 <h1> Travel Book</h1>
             </div>
@@ -34,8 +34,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav ml-auto">
                         <li class="nav-item btn">
-                            <a class="nav-link" href='{% url "main_app:index" %}'>Accueil</a>
+                            <a class="nav-link" href='{% url "main_app:index" %}'>Mes derniers voyages</a>
                         </li>
+                        <li class="nav-item btn">
+                            <a class="nav-link" href='{% url "main_app:old_travels" %}'>Mes anciens voyages</a>
+                        </li>
+
                         <li class="nav-item btn">
                             <a class="nav-link" href="{% url 'main_app:villes' %}">Villes</a>
                         </li>
@@ -55,15 +59,9 @@
         </div>
     </div>
 
-    <div class="container-fluid hauteurbox">
-        <div class="row">
-            <div class="col-12">
-                <div class="topPages mt-5">
-                    {% block content %}{% endblock %}
-                </div>
-            </div>
-        </div>
-    </div>
+
+    {% block content %}{% endblock %}
+
 
     <footer>
         <div class="row text-center text-light m-0">
@@ -83,12 +81,6 @@
                 {% endif %}
             </div>
 
-
-            <!-- <div class="col-md-1 align-self-center m-0 text-white-50">
-                {% if user.administrateur %}
-                <a class="m-0 text-reset text-decoration-none" href='/admin'>Admin</a>
-                {% endif %}
-            </div> -->
             <div class="col-md-1 align-self-center ml-1">
                 <a class="top" href="#">Retour haut de page</a>
             </div>
